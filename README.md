@@ -1,100 +1,35 @@
 // Java-University-Labs
 
-/**
- * This class will represent hockey players.
- * @author NOSHEEN
- */
-public class Player {
-	
-	/*
-	 * This is the constructor so we will be
-	 * initializing the number variables here
-	 */
-	
-	private String name;
-	private String position;
-	private int jerseyNum;
-	
+public class TestLab {
 
-/*
- * Constructor called Player with the given name, position, and jersey Number
- * @param name is name
- * @param position is position
- * @param jerseyNum is jersey Number
- */
-public Player(String name, String position, int jerseyNum) {
-	this.name = name;
-	this.position = position;
-	this.jerseyNum = jerseyNum;
-}
-
-/*
- * Accessor method to get the name of the player
- * @return name of the player
- */
-
-public String getName () {
-	// Get the player's name.
-	return name;
-}
-
-/*
- * Accessor method to get the position of the player
- * @return position of the player
- */
-
-public String getPosition () {
-	return position;
-}
-
-/*
- * Accessor method to get the jersey number of the player
- * @return JerseyNum of the player
- */
-
-public int getJerseyNum () {
-	return jerseyNum;
-}
-
-/*
- * Accessor method to set the name of the player
- * @param newName to set the name of the player to newName
- */
-
-public void setName (String newName) {
-	name = newName;
-}
-
-/*
- * Accessor method to set the position of the player
- * @param newPosition to set the position of the player to newPosition
- */
-
-public void setPosition (String newPosition) {
-	position = newPosition;
-}
-
-/*
- * Accessor method to set the jersey number of the player
- * @param newJerseyNum to set the JerseyNum of the player to newJerseyNum
- */
-
-public void setJerseyNum (int newJerseyNum) {
-	jerseyNum = newJerseyNum;
-}
-
-
-public String toString (){
-	return this.name + ": #" + this.jerseyNum;
-}
-
-
-public boolean equals (Player other) {
-	if (this.name.equals(other.name) && this.jerseyNum == other.jerseyNum) {
-		return true;
-	} else {
-		return false;
+	public static void main(String[] args) {
+		
+		// Create a Player object
+		
+		Player p1 = new Player("Nosheen", "catcher", 3);
+		System.out.println(p1.getName());
+		System.out.println(p1.getPosition());
+		System.out.println(p1.getJerseyNum());
+		
+		p1.setName("Soha");
+		p1.setPosition("defence");
+		p1.setJerseyNum(4);
+		
+		System.out.println(p1.getName());
+		System.out.println(p1.getPosition());
+		System.out.println(p1.getJerseyNum());
+		
+		System.out.println(p1);
+		
+		// Create another Player object
+		
+		Player p2 = new Player ("Soha", "defence", 4);
+		
+		if (p1.equals(p2)) {
+			System.out.println("Same player");
+		} else {
+			System.out.println("Different player");
+		}
 	}
-} 
 
 }
